@@ -16,7 +16,8 @@ class NativePeerChannelFactory {
         let decoder = RTCDefaultVideoDecoderFactory()
         nativeFactory =
             RTCPeerConnectionFactory(encoderFactory: encoder,
-                                     decoderFactory: decoder)
+                                     decoderFactory: decoder,
+                                     audioDeviceModule: NativeAudioDeviceModule.default.nativeModule)
         
         for info in encoder.supportedCodecs() {
             Logger.debug(type: .peerChannel,
