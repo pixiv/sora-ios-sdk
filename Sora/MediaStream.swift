@@ -116,6 +116,8 @@ public protocol MediaStream: class {
      */
     func send(videoFrame: VideoFrame?)
     
+    func send(sampleBuffer: CMSampleBuffer)
+
     // MARK: 終了処理
     
     /**
@@ -281,4 +283,14 @@ class BasicMediaStream: MediaStream {
         }
     }
     
+    func send(sampleBuffer: CMSampleBuffer) {
+        switch CMFormatDescriptionGetMediaType(CMSampleBufferGetFormatDescription(sampleBuffer)!) {
+        case kCMMediaType_Video:
+            send(videoFrame: VideoFrame(from: sampleBuffer))
+        case kCMMediaType_Audio:
+            AudioDeviceModule.default.deliverRecordedData(sampleBuffer)
+        default:
+            assertionFailure()
+        }
+    }
 }
