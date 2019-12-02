@@ -285,7 +285,7 @@ class BasicMediaStream: MediaStream {
         case kCMMediaType_Video:
             send(videoFrame: VideoFrame(from: sampleBuffer))
         case kCMMediaType_Audio:
-            NativeAudioDeviceModule.default.deliverRecordedData(sampleBuffer)
+            AudioDeviceModule.default.deliverRecordedData(sampleBuffer)
         default:
             assertionFailure()
         }

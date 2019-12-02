@@ -17,7 +17,7 @@ class NativePeerChannelFactory {
         nativeFactory =
             RTCPeerConnectionFactory(encoderFactory: encoder,
                                      decoderFactory: decoder,
-                                     audioDeviceModule: NativeAudioDeviceModule.default.nativeModule)
+                                     audioDeviceModule: AudioDeviceModule.default.nativeModule)
         
         for info in encoder.supportedCodecs() {
             Logger.debug(type: .peerChannel,
