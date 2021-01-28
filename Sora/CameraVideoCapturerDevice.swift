@@ -8,6 +8,7 @@ import Foundation
 
  自動的にカメラのハンドリングを行うため、複雑な用途が必要なく、すぐに使いたい場合に便利な `VideoCapturerDevice` です。
  */
+@available(iOSApplicationExtension, unavailable)
 public struct CameraVideoCapturerDevice: VideoCapturerDevice {
     let settings: CameraVideoCapturer.Settings
 
