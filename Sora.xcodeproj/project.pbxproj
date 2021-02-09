@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		61545806238EA15200D89E9C /* AudioDeviceModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61545805238EA15200D89E9C /* AudioDeviceModule.swift */; };
 		38DE16D225B16AA7007C23D8 /* CameraVideoCapturerDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DE16D125B16AA7007C23D8 /* CameraVideoCapturerDevice.swift */; };
+		61545806238EA15200D89E9C /* AudioDeviceModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61545805238EA15200D89E9C /* AudioDeviceModule.swift */; };
 		9100904E1E58B4470099E00E /* VideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9100904D1E58B4470099E00E /* VideoView.xib */; };
 		910090501E58B5450099E00E /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9100904F1E58B5450099E00E /* VideoView.swift */; };
 		9106C27E1F31A3470019E3C7 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9106C27D1F31A3470019E3C7 /* Logger.swift */; };
@@ -77,8 +77,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		61545805238EA15200D89E9C /* AudioDeviceModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDeviceModule.swift; sourceTree = "<group>"; };
 		38DE16D125B16AA7007C23D8 /* CameraVideoCapturerDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVideoCapturerDevice.swift; sourceTree = "<group>"; };
+		61545805238EA15200D89E9C /* AudioDeviceModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDeviceModule.swift; sourceTree = "<group>"; };
 		9100904D1E58B4470099E00E /* VideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoView.xib; sourceTree = "<group>"; };
 		9100904F1E58B5450099E00E /* VideoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		910444CE253EC6F400EA06BE /* AudioMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMode.swift; sourceTree = "<group>"; };
@@ -515,6 +515,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -570,7 +571,6 @@
 		};
 		91C7B09E1D54636A006F5FA2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E468BA3260AB17F9220A5002 /* Pods-Sora.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -605,7 +605,6 @@
 		};
 		91C7B09F1D54636A006F5FA2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6523F57BC3EF8964AFA55070 /* Pods-Sora.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
